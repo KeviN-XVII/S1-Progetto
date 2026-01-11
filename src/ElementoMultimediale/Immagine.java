@@ -5,27 +5,31 @@ import Interfaces.Show;
 
 public class Immagine extends ElementoMultimediale implements Show, Luminosita {
     private int luminosita;
-    public Immagine(String titolo) {
+    public Immagine(String titolo,int luminosita) {
         super(titolo);
-        this.luminosita = 5;
+        this.luminosita = luminosita;
     }
 
     @Override
     public void show() {
-        System.out.println("Luminosita: ");
-        for (int i = 0; i < this.luminosita; i++) {
-            System.out.println("*");
+        String valoreLuminosita = "";
+        for (int i = 0; i < luminosita; i++) {
+            valoreLuminosita += "*";
         }
-        System.out.println("");
+        System.out.println(getTitolo()+ ""+ valoreLuminosita);
     }
 
     @Override
     public void alzaLuminosita() {
-        luminosita++;
+        if (luminosita >= 0 && luminosita < 5) {
+            luminosita++;
+        }
     }
 
     @Override
     public void abbassaLuminosita() {
+        if (luminosita > 0 && luminosita <= 5){
         luminosita--;
+        }
     }
 }

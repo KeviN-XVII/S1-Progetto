@@ -3,9 +3,8 @@ package ElementoMultimediale;
 import java.util.Scanner;
 
 public abstract class ElementoMultimediale {
+    Scanner scanner = new Scanner(System.in);
    private String titolo;
-   Scanner  scanner = new Scanner(System.in);
-
 
    public ElementoMultimediale(String titolo) {
        this.titolo = titolo;
