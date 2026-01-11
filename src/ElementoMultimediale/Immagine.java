@@ -16,7 +16,7 @@ public class Immagine extends ElementoMultimediale implements Show, Luminosita {
         for (int i = 0; i < luminosita; i++) {
             valoreLuminosita += "*";
         }
-        System.out.println(getTitolo()+ ""+ valoreLuminosita);
+        System.out.println(getTitolo()+ "" + valoreLuminosita);
     }
 
     @Override
